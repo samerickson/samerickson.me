@@ -1,5 +1,72 @@
 <template>
-    <div>
-        <h1>This is the contact page</h1>
-    </div>
+  <b-container fluid="sm">
+    <h1 class="text-center my-5">Contact</h1>
+    <b-row>
+      <b-col md="6" offset-md="3">
+        <b-form @submit="onSubmit">
+          <b-form-group
+            id="name"
+            label="Name"
+            label-for="name-input"
+            >
+            <b-form-input
+              id="name-input"
+              v-model="form.name"
+              required
+              placeholder="Enter your name"
+            >
+            </b-form-input>
+          </b-form-group>
+          <b-form-group
+            id="email"
+            label="Email address:"
+            label-for="email-input"
+            description="This will just be used to contact you, and will not be shared with anyone."
+          >
+            <b-form-input
+              id="email-input"
+              v-model="form.email"
+              type="email"
+              required
+              placeholder="Enter email"
+            >
+            </b-form-input>
+          </b-form-group>
+          <b-form-group
+            id="message"
+            label="Message"
+          >
+            <b-form-input
+              v-model="form.text"
+              type="text"
+              required
+              placeholder="Enter your message"
+            >
+            </b-form-input>
+          </b-form-group>
+          <b-button type="submit" variant="primary">Submit</b-button>
+        </b-form>
+      </b-col>
+    </b-row>
+  </b-container>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      form: {
+        email: '',
+        name: '',
+        message: '',
+      },
+    };
+  },
+  methods: {
+    onSubmit(evt) {
+      evt.preventDefault();
+      alert(JSON.stringify(this.form));
+    },
+  },
+};
+</script>
