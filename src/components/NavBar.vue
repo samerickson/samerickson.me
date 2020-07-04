@@ -16,12 +16,12 @@
       <!-- Right aligned nav items -->
       <b-navbar-nav class=".col-md-4 ml-auto">
         <b-navbar-brand href="https://github.com/samerickson">
-          <b-tooltip target="github-tooltip" triggers="hover">Visit my Github Page</b-tooltip>
+          <b-tooltip target="github-icon" triggers="hover">Visit my Github Page</b-tooltip>
           <img
             class='header-icon'
             src="@/assets/icons/github.svg"
             alt="Github icon"
-            id="github-tooltip"
+            id="github-icon"
           />
         </b-navbar-brand>
         <b-navbar-brand href="https://codepen.io/samerickson">
@@ -33,17 +33,22 @@
           id="codepen-icon">
         </b-navbar-brand>
         <b-navbar-brand href="https://dev.to/samerickson">
-          <b-tooltip target="blog-tooltip" triggers="hover">Visit my blog</b-tooltip>
+          <b-tooltip target="blog-icon" triggers="hover">Visit my blog</b-tooltip>
           <img
           class='header-icon'
           src="@/assets/icons/dev-icon.svg"
           alt="Dev.to icon"
-          id="blog-tooltip"
+          id="blog-icon"
           >
         </b-navbar-brand>
         <b-navbar-brand href="mailto:contact@samerickson.me">
-          <b-tooltip target="mail-tooltip" triggers="hover">Send me an email</b-tooltip>
-          <img class='header-icon' src="@/assets/icons/mail.svg" alt="Mail icon" id="mail-tooltip">
+          <b-tooltip target="mail-icon" triggers="hover">Send me an email</b-tooltip>
+          <img
+            class='header-icon'
+            src="@/assets/icons/mail.svg"
+            alt="Mail icon"
+            id="mail-tooltip"
+          >
         </b-navbar-brand>
       </b-navbar-nav>
     </b-collapse>
