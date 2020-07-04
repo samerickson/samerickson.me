@@ -1,5 +1,5 @@
 <template>
-  <b-navbar toggleable="lg" type="dark" variant="info">
+  <b-navbar id="header" sticky toggleable="lg" type="dark" variant="primary">
     <b-container>
       <b-navbar-brand>Sam Erickson</b-navbar-brand>
 
@@ -56,6 +56,29 @@
   </b-navbar>
 </template>
 
+<script>
+export default {
+  created() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      const header = document.getElementById('header');
+      if (window.pageYOffset > 0) {
+        header.classList.remove('header-no-shadow');
+        header.classList.add('header-shadow');
+        return;
+      }
+      header.classList.remove('header-shadow');
+      header.classList.add('header-no-shadow');
+    },
+  },
+};
+</script>
+
 <style lang="css" scoped>
   .header-icon {
     width: 32px;
@@ -64,5 +87,16 @@
   }
   .header-icon:hover {
     filter: invert(80%);
+  }
+  .header-shadow {
+    transition: box-shadow 1s ease-out;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12),
+                2px 2px rgba(0,0,0,0.12),
+                0 4px 4px rgba(0,0,0,0.12),
+                0 8px 8px rgba(0,0,0,0.12),
+                0 16px 16px rgba(0,0,0,0.12);
+  }
+  .header-no-shadow {
+    transition: box-shadow 0.7s ease-in;
   }
 </style>
