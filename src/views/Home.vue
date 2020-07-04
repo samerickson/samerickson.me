@@ -23,23 +23,28 @@
     <div class="text-center my-5">
       <b-icon animation="cylon-vertical" icon="chevron-double-down" font-scale="3.2"></b-icon>
     </div>
-    <b-row class="my-5">
+    <div class="container">
+      <b-row class="my-5">
         <Skills />
     </b-row>
-    <b-row class="my-5">
-      <Projects/>
-    </b-row>
+    <h2 class="mt-5 mb-4">Projects</h2>
+    <Projects/>
+    <h2 class="mt-5 mb-4">Css Artwork</h2>
+    <CssArt />
+    </div>
   </section>
 </template>
 
 <script>
 import Skills from '@/components/Skills.vue';
-import Projects from '@/views/Projects.vue';
+import Projects from '@/components/Projects.vue';
+import CssArt from '@/components/CssArt.vue';
 
 export default {
   components: {
     Skills,
     Projects,
+    CssArt,
   },
 };
 </script>
