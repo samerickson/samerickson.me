@@ -18,7 +18,7 @@
         <a href=""><h4>Linux</h4></a>
       </b-col>
       <b-col cols="8">
-        <b-form-rating v-model="linux"></b-form-rating>
+        <b-form-rating v-model="linux" readonly></b-form-rating>
       </b-col>
     </b-row>
 
@@ -28,7 +28,7 @@
         <a href=""><h4>Virtual Machines</h4></a>
       </b-col>
       <b-col cols="8">
-        <b-form-rating v-model="virtualMachines"></b-form-rating>
+        <b-form-rating v-model="virtualMachines" readonly></b-form-rating>
       </b-col>
     </b-row>
 
@@ -38,7 +38,7 @@
         <a href=""><h4>C</h4></a>
       </b-col>
       <b-col cols="8">
-        <b-form-rating v-model="c"></b-form-rating>
+        <b-form-rating v-model="c" readonly></b-form-rating>
       </b-col>
     </b-row>
 
@@ -48,7 +48,7 @@
         <a href=""><h4>Javascript</h4></a>
       </b-col>
       <b-col cols="8">
-        <b-form-rating v-model="javascript"></b-form-rating>
+        <b-form-rating v-model="javascript" readonly></b-form-rating>
       </b-col>
     </b-row>
 
@@ -58,7 +58,7 @@
         <a href=""><h4>Python</h4></a>
       </b-col>
       <b-col cols="8">
-        <b-form-rating v-model="python"></b-form-rating>
+        <b-form-rating v-model="python" readonly></b-form-rating>
       </b-col>
     </b-row>
 
@@ -70,7 +70,7 @@
         </a>
       </b-col>
       <b-col cols="8">
-        <b-form-rating v-model="vue"></b-form-rating>
+        <b-form-rating v-model="vue" readonly></b-form-rating>
       </b-col>
     </b-row>
 
