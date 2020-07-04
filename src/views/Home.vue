@@ -7,7 +7,7 @@
         <p>I am a computer science student at Vancouver Island University.</p>
         <b-button to="/about" class="mr-2" variant="primary" href="#">Learn More</b-button>
         <b-button to="/projects" variant="success" href="#">See Projects</b-button>
-        </b-container>
+      </b-container>
     </b-jumbotron>
     <Skills />
     <CssArt />
