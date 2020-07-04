@@ -47,7 +47,7 @@
             class='header-icon'
             src="@/assets/icons/mail.svg"
             alt="Mail icon"
-            id="mail-tooltip"
+            id="mail-icon"
           >
         </b-navbar-brand>
       </b-navbar-nav>
