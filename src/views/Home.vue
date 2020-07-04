@@ -6,7 +6,11 @@
           <b-col>
             <h1 class="display-3">Sam Erickson</h1>
             <p class="lead">Welcome to my webpage</p>
-            <p>I am a computer science student at Vancouver Island University.</p>
+            <p>
+              I am a computer science student at Vancouver Island University
+              who loves making virtual machines and playing around with operating systems.
+              I currently teach grades 5 and 6 kids computer science.
+            </p>
             <b-button to="/about" class="mr-2" variant="primary" href="#">Learn More</b-button>
             <b-button to="/projects" variant="success" href="#">See Projects</b-button>
           </b-col>
