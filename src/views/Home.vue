@@ -16,7 +16,7 @@
         </b-row>
       </b-container>
     </b-jumbotron>
-    <div class="text-center">
+    <div class="text-center my-5">
       <b-icon animation="cylon-vertical" icon="chevron-double-down" font-scale="3.2"></b-icon>
     </div>
     <Skills />
@@ -25,9 +25,11 @@
 </template>
 
 <script>
+import Skills from '@/components/Skills.vue';
 
 export default {
   components: {
+    Skills,
   },
 };
 </script>
