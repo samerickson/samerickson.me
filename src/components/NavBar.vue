@@ -24,6 +24,14 @@
             id="github-tooltip"
           />
         </b-navbar-brand>
+        <b-navbar-brand href="https://codepen.io/samerickson">
+          <b-tooltip target="codepen-icon" triggers="hover">Visit my Codepen Page</b-tooltip>
+          <img
+          class="header-icon"
+          src="@/assets/icons/codepen.svg"
+          alt="Codepen icon"
+          id="codepen-icon">
+        </b-navbar-brand>
         <b-navbar-brand href="https://dev.to/samerickson">
           <b-tooltip target="blog-tooltip" triggers="hover">Visit my blog</b-tooltip>
           <img
