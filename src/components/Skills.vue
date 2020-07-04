@@ -32,13 +32,13 @@
       </b-col>
     </b-row>
 
-    <!-- C++ -->
+    <!-- C -->
     <b-row class="my-4">
       <b-col cols="4">
-        <a href=""><h4>C++</h4></a>
+        <a href=""><h4>C</h4></a>
       </b-col>
       <b-col cols="8">
-        <b-form-rating v-model="cPlusPlus"></b-form-rating>
+        <b-form-rating v-model="c"></b-form-rating>
       </b-col>
     </b-row>
 
@@ -82,7 +82,7 @@
 export default {
   data() {
     return {
-      cPlusPlus: 4,
+      c: 3,
       javascript: 3,
       python: 3.5,
       linux: 4.5,
