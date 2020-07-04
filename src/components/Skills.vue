@@ -6,7 +6,7 @@
       <b-col cols="4">
         <h3>Technology</h3>
       </b-col>
-      <b-col col="8">
+      <b-col cols="8">
         <h3>Skill level</h3>
       </b-col>
     </b-row>
