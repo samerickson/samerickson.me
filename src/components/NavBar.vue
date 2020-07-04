@@ -84,6 +84,7 @@ export default {
     width: 32px;
     filter: invert(100%);
     margin-right: 0.6em;
+    transition: filter 0.5s ease-in-out;
   }
   .header-icon:hover {
     filter: invert(80%);
