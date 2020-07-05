@@ -16,7 +16,12 @@
       <!-- Right aligned nav items -->
       <b-navbar-nav class=".col-md-4 ml-auto">
         <b-navbar-brand href="https://github.com/samerickson">
-          <b-tooltip target="github-icon" triggers="hover">Visit my Github Page</b-tooltip>
+          <b-tooltip
+            target="github-icon"
+            triggers="hover"
+            >
+              Visit my Github Page
+            </b-tooltip>
           <img
             class='header-icon'
             src="@/assets/icons/github.svg"
@@ -25,7 +30,12 @@
           />
         </b-navbar-brand>
         <b-navbar-brand href="https://codepen.io/samerickson">
-          <b-tooltip target="codepen-icon" triggers="hover">Visit my Codepen Page</b-tooltip>
+          <b-tooltip
+            target="codepen-icon"
+            triggers="hover"
+          >
+            Visit my Codepen page
+          </b-tooltip>
           <img
           class="header-icon"
           src="@/assets/icons/codepen.svg"
@@ -33,7 +43,12 @@
           id="codepen-icon">
         </b-navbar-brand>
         <b-navbar-brand href="https://dev.to/samerickson">
-          <b-tooltip target="blog-icon" triggers="hover">Visit my blog</b-tooltip>
+          <b-tooltip
+            target="blog-icon"
+            triggers="hover"
+            >
+              Visit my blog
+            </b-tooltip>
           <img
           class='header-icon'
           src="@/assets/icons/dev-icon.svg"
@@ -41,8 +56,27 @@
           id="blog-icon"
           >
         </b-navbar-brand>
+        <b-navbar-brand href="https://www.hackerrank.com/samericksn">
+          <b-tooltip
+            target="hackerrank-icon"
+            triggers="hover"
+          >
+            Visit my Hacker rank profile
+          </b-tooltip>
+          <img
+          class='header-icon'
+          src="@/assets/icons/hackerrank.svg"
+          alt="Hacker rank icon"
+          id="hackerrank-icon"
+          >
+        </b-navbar-brand>
         <b-navbar-brand href="mailto:contact@samerickson.me">
-          <b-tooltip target="mail-icon" triggers="hover">Send me an email</b-tooltip>
+          <b-tooltip
+            target="mail-icon"
+            triggers="hover"
+          >
+            Send me an email
+          </b-tooltip>
           <img
             class='header-icon'
             src="@/assets/icons/mail.svg"
