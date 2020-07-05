@@ -1,16 +1,16 @@
 <template>
   <b-container>
     <h1 class="mt-5 mb-4">Projects</h1>
-    <Projects />
+    <ProjectHighlights />
   </b-container>
 </template>
 
 <script>
-import Projects from '@/components/Projects.vue';
+import ProjectHighlights from '@/components/ProjectHighlights.vue';
 
 export default {
   components: {
-    Projects,
+    ProjectHighlights,
   },
 };
 </script>

@@ -28,7 +28,7 @@
         <Skills />
     </b-row>
     <h2 class="mt-5 mb-4">Projects</h2>
-    <Projects/>
+    <ProjectHighlights />
     <h2 class="mt-5 mb-4">Css Artwork</h2>
     <CssArt />
     </div>
@@ -37,13 +37,13 @@
 
 <script>
 import Skills from '@/components/Skills.vue';
-import Projects from '@/components/Projects.vue';
+import ProjectHighlights from '@/components/ProjectHighlights.vue';
 import CssArt from '@/components/CssArt.vue';
 
 export default {
   components: {
     Skills,
-    Projects,
+    ProjectHighlights,
     CssArt,
   },
 };
