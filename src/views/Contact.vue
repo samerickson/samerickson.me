@@ -37,7 +37,7 @@
             label="Message"
           >
             <b-form-input
-              v-model="form.text"
+              v-model="form.message"
               type="text"
               required
               placeholder="Enter your message"
@@ -52,6 +52,7 @@
 </template>
 
 <script>
+
 export default {
   data() {
     return {
@@ -63,9 +64,14 @@ export default {
     };
   },
   methods: {
-    onSubmit(evt) {
-      evt.preventDefault();
-      alert(JSON.stringify(this.form));
+    onSubmit(event) {
+      event.preventDefault();
+      const serverURL = 'http://localhost:3000/send';
+      this.axios.post(serverURL, this.form).then((res) => {
+        console.log(res);
+      }).catch((err) => {
+        console.log(err);
+      });
     },
   },
 };
