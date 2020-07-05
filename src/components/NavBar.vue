@@ -9,6 +9,7 @@
       <b-navbar-nav>
         <b-nav-item to="/">Home</b-nav-item>
         <b-nav-item to="/projects">Projects</b-nav-item>
+        <b-nav-item to="/css-art">Css Artwork</b-nav-item>
         <b-nav-item to="/contact">Contact</b-nav-item>
         <b-nav-item to="/about">About</b-nav-item>
       </b-navbar-nav>
