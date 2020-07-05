@@ -2,7 +2,7 @@
   <b-container>
     <h1 class="text-center my-5">About me</h1>
     <b-row>
-      <b-col cols=8 offset-md="2">
+      <b-col cols="12" md="8" lg="8" offset-md="2" offset="0" sm="12">
         <p>
           Sam is currently a computer science student at
           <a href="https://www.viu.ca/programs/science-and-technology/computer-science-bsc">
