@@ -66,7 +66,7 @@ export default {
   methods: {
     onSubmit(event) {
       event.preventDefault();
-      const serverURL = 'http://localhost:3000/send';
+      const serverURL = process.env.VUE_APP_API;
       this.axios.post(serverURL, this.form).then((res) => {
         console.log(res);
       }).catch((err) => {
