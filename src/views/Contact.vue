@@ -27,6 +27,7 @@
               id="email-input"
               v-model="form.email"
               type="email"
+              :state="isValidEmail"
               required
               placeholder="Enter email"
             >
@@ -72,6 +73,10 @@ export default {
       }).catch((err) => {
         console.log(err);
       });
+    },
+    isValidEmail() {
+      const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/;
+      return re.test(this.form.email);
     },
   },
 };
