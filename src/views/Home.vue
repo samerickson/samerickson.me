@@ -14,17 +14,17 @@
             <b-button to="/about" class="mr-2" variant="primary" href="#">Learn More</b-button>
             <b-button to="/projects" variant="success" href="#">See Projects</b-button>
           </b-col>
-          <b-col>
+          <b-col class="d-none d-md-block">
             <b-img src="https://openclipart.org/image/2400px/svg_to_png/194077/Placeholder.png" fluid></b-img>
           </b-col>
         </b-row>
       </b-container>
     </b-jumbotron>
-    <div class="text-center my-5">
+    <div class="text-center md-my-5">
       <b-icon animation="cylon-vertical" icon="chevron-double-down" font-scale="3.2"></b-icon>
     </div>
     <div class="container">
-      <b-row class="my-5">
+      <b-row class="md-my-5">
         <Skills />
     </b-row>
     <h2 class="mt-5 mb-4">Projects</h2>
