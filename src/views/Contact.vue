@@ -12,7 +12,7 @@
       <b-col cols="12" lg="6" md="8" offset-lg="3" offset-md="2">
         <h2>You have made too many requests</h2>
         <p>Please come back in an hour.</p>
-        <b-button to="/home" variant="warning" >Continue</b-button>
+        <b-button to="/" variant="warning" >Continue</b-button>
       </b-col>
     </b-row>
     <b-row v-else>
