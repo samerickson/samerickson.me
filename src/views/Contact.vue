@@ -2,13 +2,21 @@
   <b-container fluid="sm">
     <h1 class="text-center my-5">Contact</h1>
     <b-row v-if="hasBeenSubmitted">
-      <b-col>
+      <b-col cols="12" lg="6" md="8" offset-lg="3" offset-md="2">
         <h2>Your Message Has been Sent</h2>
         <p>Thanks for reaching out!</p>
+        <b-button to="/home" variant="success">Continue</b-button>
+      </b-col>
+    </b-row>
+    <b-row v-else-if="tooManyRequests">
+      <b-col cols="12" lg="6" md="8" offset-lg="3" offset-md="2">
+        <h2>You have made too many requests</h2>
+        <p>Please come back in an hour.</p>
+        <b-button to="/home" variant="warning" >Continue</b-button>
       </b-col>
     </b-row>
     <b-row v-else>
-      <b-col md="6" offset-md="3">
+      <b-col cols="12" lg="6" md="8" offset-lg="3" offset-md="2">
         <b-form @submit="onSubmit" >
           <b-form-group
             id="name"
@@ -44,14 +52,15 @@
             id="message"
             label="Message"
           >
-            <b-form-input
+            <b-form-textarea
               v-model="form.message"
               type="text"
               required
+              rows="6"
               :state="isValidMessage()"
               placeholder="Enter your message"
             >
-            </b-form-input>
+            </b-form-textarea>
           </b-form-group>
           <b-button :disabled="!isValidEmail()" type="submit" variant="primary">Submit</b-button>
         </b-form>
@@ -71,6 +80,7 @@ export default {
         message: '',
       },
       hasBeenSubmitted: false,
+      tooManyRequests: false,
     };
   },
   methods: {
@@ -84,6 +94,7 @@ export default {
           console.log(res);
         }).catch((err) => {
           console.log(err);
+          this.tooManyRequests = true;
         });
       }
     },
