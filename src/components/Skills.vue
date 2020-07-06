@@ -42,6 +42,18 @@
       </b-col>
     </b-row>
 
+    <!-- Nodejs -->
+    <b-row class="my-4">
+      <b-col cols="4">
+        <a href="">
+          <h4>Node.js</h4>
+        </a>
+      </b-col>
+      <b-col cols="8">
+        <b-form-rating v-model="nodeJs" readonly></b-form-rating>
+      </b-col>
+    </b-row>
+
     <!-- Javascript -->
     <b-row class="my-4">
       <b-col cols="4">
@@ -88,6 +100,7 @@ export default {
       linux: 4.5,
       virtualMachines: 5,
       vue: 3,
+      nodeJs: 4,
     };
   },
 };
