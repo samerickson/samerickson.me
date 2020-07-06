@@ -1,7 +1,13 @@
 <template>
   <b-container fluid="sm">
     <h1 class="text-center my-5">Contact</h1>
-    <b-row>
+    <b-row v-if="hasBeenSubmitted">
+      <b-col>
+        <h2>Your Message Has been Sent</h2>
+        <p>Thanks for reaching out!</p>
+      </b-col>
+    </b-row>
+    <b-row v-else>
       <b-col md="6" offset-md="3">
         <b-form @submit="onSubmit" >
           <b-form-group
@@ -64,6 +70,7 @@ export default {
         name: '',
         message: '',
       },
+      hasBeenSubmitted: false,
     };
   },
   methods: {
@@ -73,10 +80,9 @@ export default {
         event.preventDefault();
         const serverURL = process.env.VUE_APP_API;
         this.axios.post(serverURL, this.form).then((res) => {
-          alert('Your message has been sent');
+          this.hasBeenSubmitted = true;
           console.log(res);
         }).catch((err) => {
-          alert('Error: your message did not send');
           console.log(err);
         });
       }
