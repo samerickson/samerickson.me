@@ -4,7 +4,7 @@
       <a href=""><h4>{{skill}}</h4></a>
     </b-col>
     <b-col md="8" cols="12">
-      <b-form-rating v-model="value" readonly></b-form-rating>
+      <b-form-rating v-model="value" variant="success" readonly></b-form-rating>
     </b-col>
   </b-row>
 </template>
