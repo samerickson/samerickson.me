@@ -3,7 +3,7 @@
     <h1 class="text-center my-5">Contact</h1>
     <b-row>
       <b-col md="6" offset-md="3">
-        <b-form @submit="onSubmit">
+        <b-form @submit="onSubmit" >
           <b-form-group
             id="name"
             label="Name"
@@ -13,6 +13,7 @@
               id="name-input"
               v-model="form.name"
               required
+              :state="isValidName()"
               placeholder="Enter your name"
             >
             </b-form-input>
@@ -27,7 +28,7 @@
               id="email-input"
               v-model="form.email"
               type="email"
-              :state="isValidEmail"
+              :state="isValidEmail()"
               required
               placeholder="Enter email"
             >
@@ -41,11 +42,12 @@
               v-model="form.message"
               type="text"
               required
+              :state="isValidMessage()"
               placeholder="Enter your message"
             >
             </b-form-input>
           </b-form-group>
-          <b-button type="submit" variant="primary">Submit</b-button>
+          <b-button :disabled="!isValidEmail()" type="submit" variant="primary">Submit</b-button>
         </b-form>
       </b-col>
     </b-row>
@@ -66,13 +68,30 @@ export default {
   },
   methods: {
     onSubmit(event) {
-      event.preventDefault();
-      const serverURL = process.env.VUE_APP_API;
-      this.axios.post(serverURL, this.form).then((res) => {
-        console.log(res);
-      }).catch((err) => {
-        console.log(err);
-      });
+      if (this.isValidEmail()) {
+        console.log('Submitting form');
+        event.preventDefault();
+        const serverURL = process.env.VUE_APP_API;
+        this.axios.post(serverURL, this.form).then((res) => {
+          alert('Your message has been sent');
+          console.log(res);
+        }).catch((err) => {
+          alert('Error: your message did not send');
+          console.log(err);
+        });
+      }
+    },
+    isValidForm() {
+      if (!this.isValidEmail) return false;
+      if (!this.isValidName) return false;
+      if (!this.isValidMessage) return false;
+      return true;
+    },
+    isValidName() {
+      return this.form.name.length > 2 && this.form.name.length < 26;
+    },
+    isValidMessage() {
+      return this.form.message.length > 5 && this.form.message.length < 250;
     },
     isValidEmail() {
       const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/;
