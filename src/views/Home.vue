@@ -3,7 +3,7 @@
     <b-jumbotron>
       <b-container>
         <b-row align-v="center">
-          <b-col>
+          <b-col cols="12" md="8" lg="6">
             <h1 class="display-3">Sam Erickson</h1>
             <p class="lead">Welcome to my webpage</p>
             <p>
@@ -14,9 +14,9 @@
             <b-button to="/about" class="mr-2" variant="primary" href="#">Learn More</b-button>
             <b-button to="/projects" variant="success" href="#">See Projects</b-button>
           </b-col>
-          <b-col class="d-none d-md-block">
-            <b-img src="https://openclipart.org/image/2400px/svg_to_png/194077/Placeholder.png" fluid></b-img>
-          </b-col>
+          <!-- <b-col class="d-none d-md-block">
+            <b-img src="https://images.unsplash.com/photo-1594008037842-11fe03ea82af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" fluid></b-img>
+          </b-col> -->
         </b-row>
       </b-container>
     </b-jumbotron>
